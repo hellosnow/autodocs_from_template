@@ -1,0 +1,8 @@
+{
+	"repo": [{
+		"url": "[input your repo url]https://github.com/Visual-Studio-China/azure-sdk-for-net.git",
+		"branch": "[input your repo branch that you want to build on]AutoRest",
+		"name": "[input clone_folder name for this repo]azure-sdk-for-net",
+		"build_script": "[input script to build the repo, leave it out if no script is needed]& msbuild build.proj"
+	}]
+}

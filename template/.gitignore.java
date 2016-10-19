@@ -1,0 +1,13 @@
+log/
+obj/
+_site/
+.optemp/
+_themes/
+_themes.MSDN.Modern/
+_themes.VS.Modern/
+Scripts/obj/
+src/
+_javadocs/
+code2yaml/
+api/.inter/
+.openpublishing.buildcore.ps1

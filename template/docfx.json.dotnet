@@ -1,0 +1,76 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "**/project.json"
+          ],
+          "exclude": [
+            "**/bin/**",
+            "**/obj/**",
+            "**/*.Tests/project.json"
+          ],
+          "cwd": "src/[repository clone_folder name]"
+        }
+      ],
+      "dest": "api-ref/[sub_path for this project]"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.yml"
+        ],
+        "exclude": [
+          "**/toc.yml"
+        ],
+        "src": "api-ref",
+        "dest": "."
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "api-ref",
+        "dest": "."
+      },
+      {
+        "files": [
+          "index.md"
+        ],
+        "src": "api-index",
+        "dest": "."
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "breadcrumb",
+        "dest": "breadcrumb"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "documentation",
+        "dest": "documentation"
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [
+          "api-doc/**/*.md"
+        ]
+      }
+    ],
+    "globalMetadata": {
+      "breadcrumb_path": "~/breadcrumb/toc.yml"
+    },
+    "dest": "_site",
+    "template": [
+      "docs.html"
+    ]
+  }
+}
