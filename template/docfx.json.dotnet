@@ -21,12 +21,12 @@
     "content": [
       {
         "files": [
-          "**/*.yml"
+          "*.yml"
         ],
         "exclude": [
-          "**/toc.yml"
+          "toc.yml"
         ],
-        "src": "api-ref",
+        "src": "api-ref/[sub_path for this project]",
         "dest": "."
       },
       {
