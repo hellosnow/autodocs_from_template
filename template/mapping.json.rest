@@ -1,0 +1,14 @@
+{
+  "target_api_root_dir": "api-ref",
+  "mapping": [
+    {
+      "source": "[repo path for the project]/[swagger path]",
+      "target_dir": "[target directory]"
+    },
+    {
+      "source": "[repo path for the project]/[swagger path]",
+      "target_dir": "[target directory]",
+      "toc_title": "[configured toc title]"
+    }
+  ]
+}

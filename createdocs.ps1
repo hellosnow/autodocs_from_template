@@ -23,12 +23,15 @@ Push-Location $scriptHome
 
 $templateZip = "template.zip"
 $docs = "docs"
-Unzip $templateZip $docs
+if (Test-Path $docs) {
+  Remove-Item $docs -recurse -Force
+}
+Unzip $scriptHome\$templateZip $scriptHome\$docs
 Push-Location $docs
 # remove files whose language doesn't match
 if (!$language)
 {
-    $language = "dotnet"
+  $language = "dotnet"
 }
 $language = "." + $language
 get-childItem . | foreach-object {
@@ -39,7 +42,7 @@ get-childItem . | foreach-object {
   }
   else
   {
-    remove-item $_.FullName
+    remove-item $_.FullName -Force
   }
 }
 md -Force "api-doc"

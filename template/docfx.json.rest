@@ -1,0 +1,52 @@
+{
+  "build": {
+    "content": [
+      {
+        "src":"api-ref",
+        "files": [
+          "**.json",
+          "**/toc.md"
+        ],
+        "dest":"api"
+      },
+      {
+        "src":"api-index",
+        "files": [
+          "index.md"
+        ],
+        "dest":"api"
+      },
+      {
+        "files": [
+          "*.md",
+          "toc.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "_site/**"
+        ]
+      },
+      {
+        "files": [
+          "breadcrumb/toc.yml"
+        ]
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [
+          "api-doc/**.md"
+        ]
+      }
+    ],
+    "externalReference": [],
+    "globalMetadata": {
+      "breadcrumb_path": "~/breadcrumb/toc.yml"
+    },
+    "fileMetadata": {},
+    "template": [
+      "docs.html"
+    ],
+    "dest": "_site"
+  }
+}

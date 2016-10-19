@@ -5,7 +5,7 @@ _site/
 _themes/
 _themes.MSDN.Modern/
 _themes.VS.Modern/
-Scripts/obj/
+scripts/obj/
 src/
 _javadocs/
 code2yaml/
